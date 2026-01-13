@@ -25,7 +25,7 @@ fi
 
 FILE_NAME=$(basename "${FILE}")
 NUM_PAGES=$(pdfinfo ${FILE} | grep Pages | awk '{print $2}')
-TEMP_DIR="pdf_temp"
+TEMP_DIR=${FILE}"_splitted"
 
 
 # create temp dir if not existing yet
